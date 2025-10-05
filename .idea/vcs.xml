@@ -1,6 +1,59 @@
+===============================================
+ARCHIVO: .idea/vcs.xml
+-----------------------------------------------
+Este archivo pertenece a la carpeta oculta **.idea**, 
+creada automáticamente por el entorno JetBrains 
+(WebStorm, IntelliJ IDEA, etc.).
+
+Su función es registrar la configuración del sistema 
+de control de versiones que usa el proyecto, por ejemplo Git.
+
+===============================================
+DESGLOSE DEL CONTENIDO
+-----------------------------------------------
+
 <?xml version="1.0" encoding="UTF-8"?>
+-> Indica que es un archivo XML estándar, con codificación UTF-8.
+
 <project version="4">
-  <component name="VcsDirectoryMappings">
-    <mapping directory="" vcs="Git" />
-  </component>
+-> Declara que este archivo corresponde a un proyecto JetBrains 
+   con formato de configuración versión 4.
+
+-----------------------------------------------
+<component name="VcsDirectoryMappings">
+-> Define el componente encargado de gestionar las “mapeos” 
+   entre carpetas del proyecto y sus sistemas de control de versiones (VCS).
+
+-----------------------------------------------
+<mapping directory="" vcs="Git" />
+-> Este elemento indica que el **proyecto completo** 
+   (carpeta raíz, representada por `directory=""`) 
+   está conectado a un sistema de control de versiones **Git**.
+
+   En otras palabras:
+   - **directory=""** → aplica a todo el proyecto.
+   - **vcs="Git"** → el sistema usado es Git.
+
+-----------------------------------------------
+</component>
 </project>
+
+===============================================
+PROPÓSITO DEL ARCHIVO
+-----------------------------------------------
+✔ Registrar que el proyecto usa **Git** como sistema de control de versiones.  
+✔ Permitir al IDE reconocer automáticamente los cambios de archivos 
+  (commits, branches, merges, etc.).  
+✔ Facilitar la integración con herramientas internas como el panel de control 
+  de versiones de WebStorm o IntelliJ.
+
+===============================================
+EXPLICACIÓN PARA DEFENSA ORAL
+-----------------------------------------------
+> “El archivo vcs.xml está dentro de la carpeta .idea, 
+> que contiene la configuración del entorno JetBrains.  
+> Este archivo indica qué sistema de control de versiones usa el proyecto.  
+> En este caso, está mapeado a Git, lo que significa que todo el proyecto 
+> está bajo control de versiones.  
+> Gracias a este archivo, el IDE puede mostrar los cambios realizados, 
+> los commits pendientes y las ramas activas directamente desde la interfaz.”

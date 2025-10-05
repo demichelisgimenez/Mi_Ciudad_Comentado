@@ -1,8 +1,61 @@
+===============================================
+ARCHIVO: .idea/modules.xml
+-----------------------------------------------
+Este archivo forma parte de la configuración interna del entorno
+de desarrollo JetBrains (WebStorm, IntelliJ IDEA, etc.).
+
+Se genera automáticamente y **no afecta el funcionamiento del código**.
+Su propósito es indicar qué módulos forman parte del proyecto
+y dónde se encuentran sus archivos de configuración (.iml).
+
+===============================================
+DESGLOSE DEL CONTENIDO
+-----------------------------------------------
+
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="ProjectModuleManager">
-    <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/mi-ciudad.iml" filepath="$PROJECT_DIR$/.idea/social-artists.iml" />
-    </modules>
-  </component>
+-> Declara que este archivo pertenece a un proyecto de tipo JetBrains
+   con versión de esquema 4.
+
+-----------------------------------------------
+<component name="ProjectModuleManager">
+-> Es el componente encargado de gestionar los módulos del proyecto.
+
+-----------------------------------------------
+<modules>
+  <module 
+     fileurl="file://$PROJECT_DIR$/.idea/mi-ciudad.iml"
+     filepath="$PROJECT_DIR$/.idea/social-artists.iml" />
+</modules>
+
+-> Aquí se listan los módulos que el IDE reconoce.
+   En este caso:
+   - **fileurl** indica la ubicación del archivo `.iml` (configuración del módulo).
+   - **filepath** es la ruta local al archivo en disco.
+
+⚠️ Nota:
+Se observa que el módulo tiene un nombre distinto entre `mi-ciudad.iml`
+y `social-artists.iml`. Esto probablemente es un error o una herencia
+de un proyecto anterior renombrado. El IDE suele mantener la referencia
+aunque el nombre cambie.
+
+-----------------------------------------------
+</component>
 </project>
+
+===============================================
+PROPÓSITO DEL ARCHIVO
+-----------------------------------------------
+✔ Registrar los módulos que pertenecen al proyecto.
+✔ Mantener las rutas a los archivos `.iml` (de configuración interna).
+✔ Permitir al IDE cargar correctamente la estructura modular.
+
+===============================================
+EXPLICACIÓN PARA DEFENSA ORAL
+-----------------------------------------------
+> “El archivo modules.xml pertenece a la carpeta .idea del entorno JetBrains.
+> No forma parte del código funcional, sino de la configuración del proyecto.
+> Su función es registrar los módulos o subproyectos activos y vincularlos
+> con sus archivos .iml. En este caso, apunta al módulo ‘mi-ciudad’,
+> que es el núcleo de la aplicación. Es un archivo técnico que el IDE
+> usa para abrir el proyecto correctamente, y no se modifica manualmente.”

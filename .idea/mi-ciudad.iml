@@ -1,12 +1,66 @@
+===============================================
+ARCHIVO: .idea/mi-ciudad.iml
+-----------------------------------------------
+Este archivo es generado automáticamente por el entorno de desarrollo
+JetBrains (por ejemplo: WebStorm, IntelliJ IDEA o PhpStorm).
+
+No forma parte del código de la aplicación.
+Sirve para que el IDE recuerde la configuración del proyecto,
+como rutas, exclusiones y entorno de ejecución.
+
+===============================================
+DESGLOSE DEL CONTENIDO
+-----------------------------------------------
+
 <?xml version="1.0" encoding="UTF-8"?>
 <module type="WEB_MODULE" version="4">
-  <component name="NewModuleRootManager">
-    <content url="file://$MODULE_DIR$">
-      <excludeFolder url="file://$MODULE_DIR$/.tmp" />
-      <excludeFolder url="file://$MODULE_DIR$/temp" />
-      <excludeFolder url="file://$MODULE_DIR$/tmp" />
-    </content>
-    <orderEntry type="inheritedJdk" />
-    <orderEntry type="sourceFolder" forTests="false" />
-  </component>
+
+-> Indica que el proyecto es un módulo de tipo “WEB_MODULE”
+   (es decir, una aplicación web o móvil basada en JavaScript/TypeScript).
+
+-----------------------------------------------
+<component name="NewModuleRootManager">
+-> Es el componente principal que gestiona el contenido del módulo:
+   qué carpetas incluye o excluye, qué entorno usa, etc.
+
+-----------------------------------------------
+<content url="file://$MODULE_DIR$">
+-> Define la carpeta raíz del módulo (el directorio del proyecto actual).
+
+Dentro de este bloque se indican las carpetas a excluir:
+
+<excludeFolder url="file://$MODULE_DIR$/.tmp" />
+<excludeFolder url="file://$MODULE_DIR$/temp" />
+<excludeFolder url="file://$MODULE_DIR$/tmp" />
+
+-> Estas líneas le dicen al IDE que ignore esas carpetas temporales
+   (archivos de compilación o caché que no deben indexarse).
+
+-----------------------------------------------
+<orderEntry type="inheritedJdk" />
+-> El entorno de ejecución usa la configuración predeterminada de Node.js/JDK
+   que el IDE tiene asignado por defecto.
+
+<orderEntry type="sourceFolder" forTests="false" />
+-> Indica que la carpeta principal contiene código fuente (no de pruebas).
+
+-----------------------------------------------
+</component>
 </module>
+
+===============================================
+PROPÓSITO DEL ARCHIVO
+-----------------------------------------------
+✔ Indicar al entorno de desarrollo cómo manejar el proyecto.
+✔ Excluir carpetas temporales o de caché.
+✔ Registrar el tipo de módulo (web).
+✔ No afecta el funcionamiento de la aplicación.
+
+===============================================
+EXPLICACIÓN PARA DEFENSA ORAL
+-----------------------------------------------
+> “El archivo mi-ciudad.iml pertenece a la configuración interna del entorno
+> de desarrollo (WebStorm o IntelliJ). No interviene en el código de la app,
+> sino que le indica al programa qué carpetas ignorar (como tmp o temp),
+> qué tipo de proyecto es (web) y cómo organizar las rutas.
+> Es un archivo auxiliar que no se edita manualmente ni se sube a producción.”

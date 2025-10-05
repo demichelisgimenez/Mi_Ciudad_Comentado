@@ -1,0 +1,75 @@
+===============================================
+ARCHIVO: package.json
+-----------------------------------------------
+Este archivo es el corazón del proyecto en Expo/React Native.
+Define:
+- Metadatos de la app (nombre, versión, punto de entrada).
+- Scripts para correr en Android, iOS o Web.
+- Dependencias (librerías necesarias).
+- DevDependencies (librerías solo de desarrollo).
+- Configuración general.
+
+===============================================
+METADATOS DEL PROYECTO
+-----------------------------------------------
+"name": "mi-ciudad"    -> Nombre del proyecto
+"version": "1.0.0"     -> Versión de la app
+"main": "index.ts"     -> Punto de entrada principal (el archivo inicial)
+
+===============================================
+SCRIPTS
+-----------------------------------------------
+"start": "expo start"             -> Inicia el servidor de desarrollo Expo
+"android": "expo start --android" -> Abre la app en un emulador o dispositivo Android
+"ios": "expo start --ios"         -> Abre la app en un simulador iOS (requiere MacOS)
+"web": "expo start --web"         -> Ejecuta la app en el navegador
+
+===============================================
+DEPENDENCIAS (USO EN LA APP)
+-----------------------------------------------
+@expo/vector-icons            -> Íconos listos para usar
+@react-navigation/*           -> Navegación (tabs, drawer, stack)
+expo                         -> Framework base
+expo-barcode-scanner          -> Escaneo de códigos QR
+expo-secure-store             -> Almacenamiento seguro de datos
+expo-splash-screen            -> Pantalla inicial (splash)
+expo-status-bar               -> Personalización de la barra de estado
+formik / react-hook-form      -> Manejo de formularios
+yup                           -> Validación de formularios
+react / react-native          -> Núcleo de la app
+react-native-maps             -> Mapas interactivos
+react-native-reanimated       -> Animaciones avanzadas
+react-native-gesture-handler  -> Manejo de gestos táctiles
+react-native-safe-area-context-> Manejo de áreas seguras (notch, bordes)
+react-native-screens          -> Optimización de navegación
+react-native-tab-view         -> Tabs con deslizamiento
+react-native-pager-view       -> Vistas paginadas
+expo-camera                   -> Acceso a la cámara
+
+===============================================
+DEPENDENCIAS DE DESARROLLO
+-----------------------------------------------
+@babel/core                   -> Compilador JS moderno
+@types/react                  -> Tipado TypeScript para React
+babel-plugin-module-resolver  -> Alias de rutas (@utils, @app, etc.)
+babel-preset-expo             -> Configuración de Babel para Expo
+typescript                    -> Tipado estático
+
+===============================================
+CONFIGURACIÓN
+-----------------------------------------------
+"private": true -> Indica que este proyecto no se publicará en npm
+
+===============================================
+EXPLICACIÓN PARA DEFENSA ORAL
+-----------------------------------------------
+El archivo package.json define toda la configuración de librerías y scripts
+que necesita la aplicación “Mi Ciudad” para funcionar. Gracias a este archivo,
+cualquier desarrollador puede instalar dependencias con `npm install`
+y correr la app en Android, iOS o Web sin problemas.
+
+En resumen:
+- Metadatos: nombre, versión, entrada.
+- Scripts: comandos rápidos para iniciar la app.
+- Dependencias: librerías que usa la app (navegación, mapas, cámara, etc.).
+- DevDependencies: librerías de desarrollo (Babel, TypeScript).

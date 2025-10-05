@@ -1,0 +1,72 @@
+===============================================
+ARCHIVO: tsconfig.json
+-----------------------------------------------
+Este archivo configura TypeScript en el proyecto.
+Sirve para definir cómo el compilador interpreta, valida
+y organiza los archivos .ts y .tsx de la aplicación.
+
+===============================================
+EXTENSIÓN BASE
+-----------------------------------------------
+"extends": "expo/tsconfig.base"
+
+-> Indica que se usa la configuración base de Expo para TypeScript.
+   Esto incluye las reglas recomendadas para proyectos de React Native,
+   evitando tener que configurar todo desde cero.
+
+===============================================
+COMPILER OPTIONS
+-----------------------------------------------
+La sección "compilerOptions" define ajustes del compilador TypeScript.
+
+"strict": true
+-> Activa el modo estricto de TypeScript.
+   Esto mejora la detección de errores y obliga a declarar correctamente los tipos.
+   Garantiza un código más seguro y predecible.
+
+===============================================
+PATHS (ALIAS DE RUTAS)
+-----------------------------------------------
+La propiedad "paths" define alias que reemplazan rutas largas.
+
+Esto permite importar módulos con rutas cortas y ordenadas:
+
+Ejemplo:
+import Button from "@components/Button"
+en lugar de:
+import Button from "../../components/Button"
+
+Alias definidos:
+
+"@components/*" -> "./components/*"
+   ➜ Acceso directo a todos los componentes visuales.
+
+"@utils/*" -> "./utils/*"
+   ➜ Contiene funciones de utilidad, estilos globales, colores, etc.
+
+"@app/*" -> "./app/*"
+   ➜ Contiene las pantallas principales (screens) y navegadores.
+
+"@assets/*" -> "./assets/*"
+   ➜ Acceso directo a imágenes, íconos y recursos gráficos.
+
+"@shared/*" -> "./shared/*"
+   ➜ Carpeta con código reutilizable: contextos, modelos de datos, etc.
+
+===============================================
+OBJETIVO DEL ARCHIVO
+-----------------------------------------------
+✔ Mantener un código más limpio y ordenado.
+✔ Evitar rutas relativas largas y confusas.
+✔ Mejorar la detección de errores y la calidad del código.
+✔ Integrar TypeScript correctamente con Expo.
+
+===============================================
+EXPLICACIÓN PARA DEFENSA ORAL
+-----------------------------------------------
+> “El archivo tsconfig.json define la configuración de TypeScript.
+> Extiende la base de Expo e incluye los alias de rutas personalizados
+> para importar los módulos del proyecto de forma más organizada.
+> Por ejemplo, en lugar de usar rutas largas como '../../utils/styles',
+> podemos usar '@utils/styles'. Además, el modo estricto de TypeScript
+> nos ayuda a prevenir errores de tipado y mantener un código más confiable.”

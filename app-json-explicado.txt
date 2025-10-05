@@ -1,0 +1,105 @@
+===========================================================
+ARCHIVO: app.json
+Proyecto: "Mi Ciudad"
+===========================================================
+
+Este archivo define la configuración principal del proyecto Expo.
+Expo lo usa para construir, empaquetar y ejecutar la app tanto
+en desarrollo (Expo Go) como en producción (EAS Build).
+
+-----------------------------------------------------------
+SECCIÓN PRINCIPAL
+-----------------------------------------------------------
+{
+  "expo": {       ← Todo el contenido de configuración va dentro de esta clave.
+-----------------------------------------------------------
+
+  "name": "Mi Ciudad",
+    → Nombre de la aplicación tal como aparece en el dispositivo.
+
+  "slug": "mi-ciudad",
+    → Identificador único del proyecto dentro del ecosistema Expo.
+      (Se usa en builds, enlaces, URLs, etc.)
+
+  "version": "1.0.0",
+    → Versión actual de la aplicación (usada en tiendas y builds).
+
+  "icon": "./assets/icon.png",
+    → Icono principal de la app (el que se muestra en el launcher).
+
+  "userInterfaceStyle": "light",
+    → Fuerza el tema claro por defecto. Puede ser "light", "dark" o "automatic".
+
+  "newArchEnabled": true,
+    → Activa la nueva arquitectura de React Native (TurboModules / Fabric),
+      mejora rendimiento en dispositivos modernos.
+
+-----------------------------------------------------------
+CONFIGURACIÓN DE PANTALLA DE INICIO (Splash Screen)
+-----------------------------------------------------------
+  "splash": {
+      "image": "./assets/splash-icon.png",
+        → Imagen mostrada al iniciar la app.
+      "resizeMode": "contain",
+        → Ajusta la imagen sin recortarla.
+      "backgroundColor": "#ffffff"
+        → Color de fondo del splash screen.
+  },
+
+-----------------------------------------------------------
+CONFIGURACIÓN ESPECÍFICA PARA iOS
+-----------------------------------------------------------
+  "ios": {
+      "supportsTablet": true
+        → Indica que la app se adapta también a iPads.
+  },
+
+-----------------------------------------------------------
+CONFIGURACIÓN ESPECÍFICA PARA ANDROID
+-----------------------------------------------------------
+  "android": {
+      "adaptiveIcon": {
+          "foregroundImage": "./assets/adaptive-icon.png",
+            → Icono adaptativo para Android (con capa frontal).
+          "backgroundColor": "#ffffff"
+            → Color de fondo del icono adaptativo.
+      },
+      "edgeToEdgeEnabled": true
+        → Habilita el modo de pantalla completa sin bordes (Android 10+).
+  },
+
+-----------------------------------------------------------
+CONFIGURACIÓN PARA WEB
+-----------------------------------------------------------
+  "web": {
+      "favicon": "./assets/favicon.png"
+        → Icono pequeño usado cuando se ejecuta en navegador web.
+  },
+
+-----------------------------------------------------------
+PLUGINS DE EXPO USADOS EN EL PROYECTO
+-----------------------------------------------------------
+  "plugins": [
+      "expo-secure-store",
+        → Permite guardar datos sensibles de forma segura (tokens, usuario).
+      "expo-barcode-scanner"
+        → Permite acceder a la cámara para escanear códigos QR.
+  ]
+}
+
+===========================================================
+RESUMEN GENERAL
+-----------------------------------------------------------
+📱 Nombre: Mi Ciudad
+🧩 Plugins: Secure Store y Barcode Scanner
+🎨 Tema: Claro
+📦 Iconos personalizados y pantalla splash propia
+💻 Compatible con Android, iOS y Web
+
+-----------------------------------------------------------
+OBJETIVO EN LA DEFENSA ORAL:
+-----------------------------------------------------------
+Explicar que este archivo es el "corazón de la configuración" de Expo.
+Define cómo se construye, cómo se ve y qué permisos o plugins usa la app.
+No contiene lógica, solo metadatos para el empaquetado y despliegue.
+===========================================================
